@@ -14,11 +14,15 @@ class ArtistRepositoryImp (
     private val artistCacheDatasource: ArtistCacheDatasource
     ):ArtitiesRespository{
     override suspend fun getArtites(): List<Artist>? {
-        TODO("Not yet implemented")
+       return getArtistFromCache()
     }
 
     override suspend fun updateArtites(): List<Artist>? {
-        TODO("Not yet implemented")
+        val newListOfMovie = getArtistFromAPI()
+        artistLocalDataSource.clearAll()
+        artistLocalDataSource.saveArtistToDB(newListOfMovie)
+        artistCacheDatasource.saveArtistToCache(newListOfMovie)
+        return newListOfMovie
     }
 
     suspend fun getArtistFromAPI():List<Artist>{
@@ -50,7 +54,7 @@ class ArtistRepositoryImp (
         }
         return artistList
     }
-    suspend fun getMoviesFromCache():List<Artist>{
+    suspend fun getArtistFromCache():List<Artist>{
         lateinit var  artistList:List<Artist>
         try {
             artistList = artistCacheDatasource.getArtistFromCache()
