@@ -2,11 +2,12 @@ package com.example.tmdbclient.presentation.artist
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
+import com.example.tmdbclient.domain.usecase.GetArtitesUseCase
 import com.example.tmdbclient.domain.usecase.GetMoviesUseCase
 import com.example.tmdbclient.domain.usecase.UpdateArtitesUseCase
 
 class ArtistViewModel(
-    private val getArtistUseCase: GetMoviesUseCase,
+    private val getArtistUseCase: GetArtitesUseCase,
     private val updateArtitesUseCase: UpdateArtitesUseCase
 ): ViewModel() {
     fun getArtist() = liveData {

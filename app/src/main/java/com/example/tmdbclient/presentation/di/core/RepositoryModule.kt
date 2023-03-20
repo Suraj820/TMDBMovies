@@ -1,4 +1,4 @@
-package com.example.tmdbclient.presentation.di
+package com.example.tmdbclient.presentation.di.core
 
 import com.example.tmdbclient.data.repository.artist.datasource.ArtistCacheDatasource
 import com.example.tmdbclient.data.repository.artist.datasource.ArtistLocalDataSource
@@ -12,7 +12,7 @@ import com.example.tmdbclient.data.repository.tvshow.datasource.TvShowLocalDataS
 import com.example.tmdbclient.data.repository.tvshow.datasource.TvShowRemoteDatasource
 import com.example.tmdbclient.data.repository.tvshow.datasource.TvShowsCacheDataSource
 import com.example.tmdbclient.data.repository.tvshow.datasourceimpl.TvShowRepositoryImp
-import com.example.tmdbclient.domain.repository.ArtitiesRespository
+import com.example.tmdbclient.domain.repository.ArtistRespository
 import com.example.tmdbclient.domain.repository.MovieRepository
 import com.example.tmdbclient.domain.repository.TvShowRepository
 import dagger.Module
@@ -42,7 +42,7 @@ class RepositoryModule {
         artistRemoteDatasource: ArtistRemoteDatasource,
         artistLocalDataSource: ArtistLocalDataSource,
         artistCacheDataSource: ArtistCacheDatasource
-    ) : ArtitiesRespository{
+    ) : ArtistRespository{
         return ArtistRepositoryImp(
             artistRemoteDatasource,
             artistLocalDataSource,

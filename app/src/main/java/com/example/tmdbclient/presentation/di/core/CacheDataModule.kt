@@ -1,4 +1,4 @@
-package com.example.tmdbclient.presentation.di
+package com.example.tmdbclient.presentation.di.core
 
 import com.example.tmdbclient.data.repository.artist.datasource.ArtistCacheDatasource
 import com.example.tmdbclient.data.repository.artist.datasourceimpl.ArtistCacheDataSouceImpl
