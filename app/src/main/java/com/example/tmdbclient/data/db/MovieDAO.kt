@@ -11,10 +11,10 @@ interface MovieDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun saveMovies(movies:List<Movie>)
 
-    @Query("DELETE FROM popular_movies")
+    @Query("DELETE FROM popular_movie")
     suspend fun deleteAllMovies()
 
-    @Query("SELECT * FROM popular_movies")
+    @Query("SELECT * FROM popular_movie")
     suspend fun getMovies():List<Movie>
 
 }
