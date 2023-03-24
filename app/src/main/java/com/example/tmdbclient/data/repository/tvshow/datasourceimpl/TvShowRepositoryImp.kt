@@ -13,7 +13,7 @@ class TvShowRepositoryImp (
     private val tvShowCacheDataSource:  TvShowsCacheDataSource
     ): TvShowRepository {
     override suspend fun getTvShows(): List<TvShow>? {
-       return getMoviesFromCache()
+       return getTvShowFromCache()
     }
 
     override suspend fun updateTvShows(): List<TvShow>? {
@@ -53,7 +53,7 @@ class TvShowRepositoryImp (
         }
         return tvShowList
     }
-    suspend fun getMoviesFromCache():List<TvShow>{
+    suspend fun getTvShowFromCache():List<TvShow>{
         lateinit var  tvShowList:List<TvShow>
         try {
             tvShowList = tvShowCacheDataSource.getTvShowsFromCache()
