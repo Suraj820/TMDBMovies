@@ -1,5 +1,5 @@
 # TMDBClient
-Learning MVVM
-<img src="screenshot.png"></img>
+Learning MVVM</br></br>
+<img src ="screenshot.png"  height="500"/>
  
 
