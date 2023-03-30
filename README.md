@@ -25,7 +25,6 @@ Based on mvvm architecture and repository pattern.<br><br>
 - The Movie DB API
 - [Dagger2](https://github.com/google/dagger) for dependency injection
 - [Retrofit2 & Gson](https://github.com/square/retrofit) for constructing the REST API
-- [OkHttp3](https://github.com/square/okhttp) for implementing interceptor, logging and mocking web server
 - [Glide](https://github.com/bumptech/glide) for loading images
 
  
