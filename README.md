@@ -32,7 +32,7 @@ Based on mvvm architecture and repository pattern.<br><br>
 ```xml
 The MIT License (MIT)
 
-Copyright (c) 2023 Suraj820
+Copyright (c) 2023 Suraj Pal
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
